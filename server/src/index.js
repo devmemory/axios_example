@@ -12,9 +12,9 @@ app.use(cors({
     origin: 'http://localhost:3000'
 }))
 
-const test = require('./test/index')
+const test = require('./routes/test/index')
 
-app.use('/test',test)
+app.use('/api/test',test)
 
 const server = app.listen(port, () => {
     const address = server.address();

@@ -4,7 +4,7 @@ import Api from "../api";
 
 export default class TestApi extends Api {
     async getTest(params: any) {
-        const res = await super.get("/test/param", params);
+        const res = await super.get("/api/test/param", params);
 
         const rm: ResultModel = res.data;
 
@@ -18,7 +18,7 @@ export default class TestApi extends Api {
     }
 
     async postTest(model: any) {
-        const res = await super.post("/test/send/data", model);
+        const res = await super.post("/api/test/send/data", model);
 
         const rm: ResultModel = res.data;
 
@@ -40,7 +40,7 @@ export default class TestApi extends Api {
             formData.append('b', model.b);
         }
 
-        const res = await super.post("/test/send/formdata", formData, { headers: { "Content-Type": "multipart/form-data" }, });
+        const res = await super.post("/api/test/send/formdata", formData, { headers: { "Content-Type": "multipart/form-data" }, });
 
         const rm: ResultModel = res.data;
 
