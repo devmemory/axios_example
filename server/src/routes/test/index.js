@@ -5,10 +5,10 @@ const testController = new TestController();
 
 console.log({ TestController, testController });
 
-router.get('/param', testController.getParam);
+router.get('/param', (req, res) => testController.getParam(req, res));
 
-router.post('/send/data', testController.postWithBody);
+router.post('/send/data', (req, res) => testController.postWithBody(req, res));
 
-router.post('/send/formdata', testController.postWithFormData);
+router.post('/send/formdata', (req, res) => testController.postWithFormData(req, res));
 
 module.exports = router;
