@@ -1,5 +1,5 @@
-export interface ResultModel {
-    data?: any,
+export interface ResultModel<T extends any> {
+    data?: T,
     result?: {
         code: number,
         msg: string | undefined;

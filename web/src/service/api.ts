@@ -3,12 +3,10 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 export default class Api {
     private instance: AxiosInstance;
 
-    constructor() {
-        const baseURL = "http://localhost:8080";
-
+    constructor(baseURL = '', timeout = 30000) {
         this.instance = axios.create({
             baseURL,
-            timeout: 30000,
+            timeout,
         });
 
         this.instance.interceptors.request.use(
@@ -50,11 +48,11 @@ export default class Api {
         );
     }
 
-    protected async get(url: string, params?: any) {
-        return await this.instance.get(url, { params });
+    protected async get<T>(url: string, params?: any) {
+        return await this.instance.get<T>(url, { params });
     }
 
-    protected async post(url: string, data: any, config?: AxiosRequestConfig) {
-        return await this.instance.post(url, data, config);
+    protected async post<T>(url: string, data: any, config?: AxiosRequestConfig) {
+        return await this.instance.post<T>(url, data, config);
     }
 }

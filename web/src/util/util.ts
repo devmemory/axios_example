@@ -1,13 +1,13 @@
-import { ResultModel } from "src/model/result_model";
-import { ToastModel } from "src/model/toast_model";
-import { hide, showLoading, showToast } from "src/slices/toast_slice";
+import { ResultModel } from "src/model/ResultModel";
+import { ToastModel } from "src/model/ToastModel";
+import { hide, showLoading, showToast } from "src/slices/toastSlice";
 import store from "src/store";
 
 const util = {
-    checkResult: (rm: ResultModel) => {
+    checkResult: (rm: ResultModel<any>) => {
         return rm?.result?.code === 1;
     },
-    checkMsg: (rm: ResultModel) => {
+    checkMsg: (rm: ResultModel<any>) => {
         return rm?.result?.msg;
     },
     delay: (ms: number) => {

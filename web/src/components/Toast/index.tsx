@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { ToastModel } from 'src/model/toast_model';
-import Loading from '../loading/loading';
+import Loading from '../Loading';
 import styles from './toast.module.css';
+import { ToastModel } from 'src/model/ToastModel';
 
 const Toast = () => {
   const model: ToastModel = useSelector((state: any) => {

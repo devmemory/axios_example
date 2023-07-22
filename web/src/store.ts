@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import toastSlice from "./slices/toast_slice";
+import toastSlice from "./slices/toastSlice";
 
 export default configureStore({
     reducer: {

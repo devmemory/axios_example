@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import Main from './route';
-import Toast from './components/toast/toast';
+import Toast from './components/Toast';
 import './index.css';
 import store from './store';
 

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import CommonBtn from 'src/components/common_btn/common_btn';
-import TestApi from 'src/service/api/test_api';
+import TestApi from 'src/service/api/testApi';
 import styles from './index.module.css';
+import CommonBtn from 'src/components/CommonBtn';
+import { TestModel } from 'src/model/TestModel';
 
 const Main = () => {
-    const [result, setResult] = useState();
+    const [result, setResult] = useState<TestModel | undefined>();
 
     const api = new TestApi();
 
